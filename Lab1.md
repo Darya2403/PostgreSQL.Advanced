@@ -91,7 +91,7 @@
 ## 7. Эксперименты с уровнем изоляции Repeatable Read
     Начинаем новые транзакции в обеих сессиях с уровнем изоляции repeatable read
     
-    <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/96ce0c51-2a0b-4ead-acec-4eadc68a4f62" />
+   <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/96ce0c51-2a0b-4ead-acec-4eadc68a4f62" />
 
    В 1 сессии добавляем новую строку без коммита, во 2 сессии читаем данные
    - Результат: Запись НЕ ВИДНА
