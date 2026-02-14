@@ -1,5 +1,5 @@
-Лабораторная 1 - Работа с уровнями изоляции транзакции в PostgreSQL
-1. Создание проекта
+# Лабораторная 1 - Работа с уровнями изоляции транзакции в PostgreSQL
+## 1. Создание проекта
    1.1 Генерируем ssh-ключ для подключения к ВМ
    - Был создан SSH-ключ
    - Публичный ключ добавлен при создании ВМ
@@ -23,11 +23,11 @@
 
    Публичный адрес для подключения: 84.201.158.249
 
-2. Подключение по SSH
+## 2. Подключение по SSH
    
    <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/97c99fea-9fec-4827-8ece-2c17a32d6363" />
 
-3. Установка PostgreSQL
+## 3. Установка PostgreSQL
    Выполняем команды в 1-ой сессии для установки PostgreSQL:
    - sudo apt update
    - sudo apt install postgresql postgresql-contrib -y
@@ -40,12 +40,12 @@
    
    <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/101a54b6-c727-49c5-b768-e21acb231c6d" />
 
-4. Подключение к PostgreSQL
+## 4. Подключение к PostgreSQL
    - Подключаем вторую SSH-сессию через команду: sudo -u postgres psql
    
    <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/854befd9-d454-4560-b531-e0c1733516b3" />
 
-5. Работа с транзакциями
+## 5. Работа с транзакциями
    Выключаем автоматический коммит в обеих сессиях: \set AUTOCOMMIT off
    
    <img width="500" height="100" alt="image" src="https://github.com/user-attachments/assets/123fd615-6cca-474f-a9d4-61a5becf9b21" />
@@ -62,7 +62,7 @@
    
    <img width="300" height="100" alt="image" src="https://github.com/user-attachments/assets/c68d4e78-6a6d-4580-8764-548e12b1a803" />
 
-6. Изучение уровней изоляции
+## 6. Изучение уровней изоляции
 
    <img width="300" height="100" alt="image" src="https://github.com/user-attachments/assets/6d51ddb7-c54c-4a5e-b011-34c637b51d9a" />
 
@@ -88,9 +88,9 @@
    - Результат: 3 запись ВИДНА
    - Объяснение: после выполнения COMMIT данные стали зафиксированы. Новый запрос в сессии 2 видит все закоммиченные изменения.
 
-8. Эксперименты с уровнем изоляции Repeatable Read
+## 7. Эксперименты с уровнем изоляции Repeatable Read
     Начинаем новые транзакции в обеих сессиях с уровнем изоляции repeatable read
-
+    
     <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/96ce0c51-2a0b-4ead-acec-4eadc68a4f62" />
 
    В 1 сессии добавляем новую строку без коммита, во 2 сессии читаем данные
@@ -113,7 +113,7 @@
 
    <img width="300" height="400" alt="image" src="https://github.com/user-attachments/assets/5992d7d3-dfaa-4b18-88c0-bd7248d4c136" />
 
-Итоговые результаты:
+## Итоговые результаты:
    
    READ COMMITTED (уровень по умолчанию в PostgreSQL):
    - Защищает от "грязного" чтения (dirty read) — нельзя увидеть незакоммиченные данные других транзакций
