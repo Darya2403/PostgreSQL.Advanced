@@ -3,9 +3,12 @@
    1.1 Генерируем ssh-ключ
    <img width="899" height="546" alt="image" src="https://github.com/user-attachments/assets/07328a7f-5f5c-4b64-a02a-c285ffb0de24" />
    1.2 Создаем ВМ
-   <img width="1135" height="1130" alt="image" src="https://github.com/user-attachments/assets/56b67122-f63f-471d-abbb-40f5a845d374" />
-   <img width="1150" height="1046" alt="image" src="https://github.com/user-attachments/assets/fc26782b-713b-4579-bc7d-11b6c7c9a60a" />
-   <img width="1148" height="772" alt="image" src="https://github.com/user-attachments/assets/9faa1b82-8f66-493e-84eb-45696fb99430" />
+   <img width="1150" height="1104" alt="image" src="https://github.com/user-attachments/assets/4170b82e-9ec2-44f9-8b96-6752c99cc56e" />
+   <img width="1087" height="1123" alt="image" src="https://github.com/user-attachments/assets/ef5f577c-4f0b-4504-9ab2-0ae42b24e801" />
+   <img width="1146" height="745" alt="image" src="https://github.com/user-attachments/assets/613de62e-b0ad-4b9a-8c65-9d09d05c775e" />
+
+
+
    
 
 
