@@ -164,5 +164,5 @@ docker run -d \
 <img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/71db4da2-0ef0-4b69-848b-a24c42ee38ae" />
 
 Дополнительно аналогично проверяем подключение со своего устройства - все так же доступно:
-<img width="1000" height="400" alt="image" src="https://github.com/user-attachments/assets/aa662b1f-d429-48a8-bc50-d31292e7ff8a" />
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/aa662b1f-d429-48a8-bc50-d31292e7ff8a" />
 
