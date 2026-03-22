@@ -1,4 +1,4 @@
-# Постоение кластера Patroni
+# Построение кластера Patroni
 ## 1. Создание 3 виртуальных машин для etcd и 3 виртуальных машин для Patroni
 Устанавливаем CLI по гайду: https://yandex.cloud/ru/docs/cli/operations/install-cli#windows_1
 
