@@ -195,6 +195,7 @@ ls -la /home/backups.tar.gz
 <img width="1391" height="681" alt="image" src="https://github.com/user-attachments/assets/5cc0771b-a95b-425c-96c1-174e983a3abe" />
 
 Изменения в таблице:
+
 <img width="815" height="190" alt="image" src="https://github.com/user-attachments/assets/37101daa-e938-40ca-a86b-64a787bc3c65" />
 
 Инкрементальный бэкап:
