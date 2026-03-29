@@ -108,7 +108,6 @@ done in 3.57 s (drop tables 0.00 s, create tables 0.01 s, client-side generate 2
 - 10 одновременных подключений (клиентов) к БД
 - 2 потока для обработки этих 10 клиентов
 - тест длится 30 секунд
-- 
 ```
 postgres@postgres:~$ pgbench -c 10 -j 2 -T 30 -d postgres
 pgbench (18.3 (Ubuntu 18.3-1.pgdg24.04+1))
