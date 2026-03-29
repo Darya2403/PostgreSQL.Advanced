@@ -1,7 +1,6 @@
 # Бэкапы
 ## 1. Настройка бэкапов PostgreSQL с использованием pg_probackup
-Начинаем создавать ВМ, сеть default и подсети уже существуют
-Создаем 2 ВМ:
+Сеть default и подсети уже существуют. Создаем 2 ВМ:
 ```
 yc compute instance create `
   --name postgres-main `
