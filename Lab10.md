@@ -145,7 +145,7 @@ SELECT version()
 ## Генерация тестовых данных
 ```
 # Создаем папку для CSV файлов
-mkdir -p ~/benchmark/data
+mkdir -p ~/benchmark
 
 # Даем права
 sudo chown yc-user:yc-user ~/benchmark
