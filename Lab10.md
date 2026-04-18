@@ -286,7 +286,7 @@ real    78m14.823s
 user    0m0.008s
 sys     0m0.012s
 ```
-Т.к. загрузка items.csv очень долгая дальнейшие эксперименты будут на users.csv (1000000 записей)
+Т.к. загрузка items.csv очень долгая, дальнейшие эксперименты будут на users.csv (1000000 записей)
 ```
 sudo -u postgres psql -d benchmark << 'EOF'
 DROP TABLE IF EXISTS test_copy;
