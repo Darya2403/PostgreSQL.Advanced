@@ -675,7 +675,7 @@ real    8m23.847s
 user    0m3.456s
 sys     0m0.789s
 ```
-Далее снова для скорости работает с разнообразной загрузкой из users.csv
+Далее снова для скорости работаем с разнообразной загрузкой из users.csv
 ```
 clickhouse-client --password 123 --query "
 CREATE TABLE test_copy AS benchmark.users ENGINE = MergeTree() ORDER BY (region, user_id);
