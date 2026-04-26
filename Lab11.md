@@ -739,13 +739,13 @@ patroni[1540]: 2026-04-26 15:30:13,451 INFO: assigned synchronous standby pg-3
 ```
 $ patronictl -c /etc/patroni/patroni.yml list               
                                                            
-Cluster: postgres_cluster (v3.2.0) --------+----+-----------+ 
-| Member | Host          | Role    | State | TL | Lag in MB 
-+--------+---------------+---------+-------+----+----------+│
-| pg-1   | 10.128.0.40   | Replica | stop  |    |           │
-| pg-2   | 10.128.0.50   | Leader  | run   |  2 |           │
-| pg-3   | 10.128.0.60   | Replica | run   |  2 |       0.0 │
-+--------+---------------+---------+-------+----+-----------+
+Cluster: postgres_cluster (v3.2.0) ----------+----+-----------+ 
+| Member | Host          | Role    | State   | TL | Lag in MB 
++--------+---------------+---------+---------+----+----------+│
+| pg-1   | 10.128.0.40   | Replica | stopped |    |           │
+| pg-2   | 10.128.0.50   | Leader  | running |  2 |           │
+| pg-3   | 10.128.0.60   | Replica | running |  2 |       0.0 │
++--------+---------------+---------+---------+----+-----------+
 ```   
 Восстановление pg-1
 ```
