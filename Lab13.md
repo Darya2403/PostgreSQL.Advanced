@@ -346,6 +346,7 @@ kubectl port-forward svc/gp-master 5432:5432 -n greenplum --address 0.0.0.0 &
 
 ## Подготовка данных (10 ГБ датасет)
 Файл с данными взят из предыдущей лабораторной - https://github.com/Darya2403/PostgreSQL.Advanced/blob/main/Lab12.md
+
 Используем тот же chicago_taxi.csv. Копируем через PV:
 ```
 # Создаём PV для загрузки данных
@@ -488,7 +489,8 @@ CREATE INDEX idx_passenger_count ON chicago_taxi (passenger_count);
 -- Time: 18923.678 ms (00:18.924)
 ```
 ## Сравнительное тестирование запросов
-Берем запросы из лабораторной 12 - данные по одиночному инстансу представлены там
+Берем запросы из лабораторной 12 - данные по одиночному инстансу представлены там - https://github.com/Darya2403/PostgreSQL.Advanced/blob/main/Lab12.md
+
 Результаты работы по GP:
 ```
 SELECT * FROM chicago_taxi ORDER BY random() LIMIT 1;
