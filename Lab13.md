@@ -495,15 +495,15 @@ CREATE INDEX idx_passenger_count ON chicago_taxi (passenger_count);
 ```
 SELECT * FROM chicago_taxi ORDER BY random() LIMIT 1;
 ```
-Time: 19234.78 ms
-По PG: 5949.964 ms
+- Time: 19234.78 ms
+- По PG: 5949.964 ms
 
 ```
 SELECT count(*) FROM chicago_taxi 
 WHERE tpep_pickup_datetime BETWEEN '2016-01-01' AND '2016-01-07';
 ```
-Time: 3412.89 ms
-По PG: 69201.562 ms
+- Time: 3412.89 ms
+- По PG: 69201.562 ms
 
 ```
 SELECT passenger_count, 
@@ -515,8 +515,8 @@ WHERE passenger_count BETWEEN 1 AND 6
 GROUP BY passenger_count 
 ORDER BY passenger_count;
 ```
-Time: 4821.34 ms
-По PG: 45678.345 ms
+- Time: 4821.34 ms
+- По PG: 45678.345 ms
 
 ## Тестирование отказоустойчивости Greenplum в Kubernetes
 Проверяем текущее состояние:
