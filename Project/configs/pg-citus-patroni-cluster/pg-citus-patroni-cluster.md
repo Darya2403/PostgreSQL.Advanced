@@ -111,6 +111,7 @@ exit
 - У координаторов scope: citus_coord, citus.group: 0
 - У воркеров первой группы scope: citus_worker_1, citus.group: 1
 - У воркеров второй группы scope: citus_worker_2, citus.group: 2
+
 В секции bootstrap указан method: initdb, необходимые параметры PostgreSQL (shared_preload_libraries = 'citus'), а также post_init скрипт, который при первой инициализации создаёт пользователя replicator, задаёт пароль postgres и активирует расширение Citus
 
 Несколько деталей:
