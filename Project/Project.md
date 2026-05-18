@@ -31,13 +31,13 @@
 
 ## Архитектура решения
 ### Общая архитектура (физические узлы и связи)
-![img_3.png](img_3.png)
+![img_3.png](images/img_31.png)
 
 ### Логическая схема Patroni + Citus (взаимодействие компонентов)
-![img_4.png](img_4.png)
+![img_4.png](images/img_32.png)
 
 ### Схема балансировки и отказоустойчивости HAProxy/Keepalived/NLB
-![img_5.png](img_5.png)
+![img_5.png](images/img_33.png)
 
 ## Состав и IP-адресация
 Детальное описание по созданию ВМ: [vm_creation](vm_creation)
@@ -63,7 +63,7 @@ PS C:\Users\Дарья\PycharmProjects\PostgreSQL.Advanced> yc compute instance 
 | fv4pjip1nenc7rd9ujl7 | etcd-3         | ru-central1-d | RUNNING |                | 10.130.0.12  |
 +----------------------+--------
 ```
-![img.png](img.png)
+![img.png](images/img_28.png)
 
 ## Доступ через бастион
 Копирование ключа на haproxy-1:
@@ -94,8 +94,8 @@ yc vpc subnet update default-ru-central1-b --route-table-name nat-route-table
 yc vpc subnet update default-ru-central1-d --route-table-name nat-route-table
 ```
 NAT-шлюз в интерфейсе Яндекса:
-![img_2.png](img_2.png)
-![img_1.png](img_1.png)
+![img_2.png](images/img_30.png)
+![img_1.png](images/img_29.png)
 
 # Настройка кластера etcd
 Детальное описание: [etcd.md](configs%2Fetcd%2Fetcd.md)
@@ -154,10 +154,7 @@ NAT-шлюз в интерфейсе Яндекса:
 2. Citus позволяет горизонтально масштабировать базу данных путём шардирования без изменений прикладного кода
 3. Сочетание HAProxy + Keepalived + облачного NLB даёт полноценную отказоустойчивую балансировку нагрузки как внутри сети, так и из интернета 
 4. Развёртывание в трёх зонах доступности Yandex Cloud повышает устойчивость к сбоям инфраструктуры
-5. Полученная архитектура может служить шаблоном для построения production-решений высокой доступности.
-
-
-
+5. Полученная архитектура может служить шаблоном для построения production-решений высокой доступности
 
 
 

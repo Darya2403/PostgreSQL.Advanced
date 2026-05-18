@@ -27,7 +27,7 @@ sudo systemctl stop postgresql
 sudo systemctl disable postgresql
 ```
 Проверка на узле, что все корректно установилось, + pg выключен:
-![img.png](img.png)
+![img.png](../../images/img_11.png)
 
 Проверка:
 ```
@@ -594,12 +594,12 @@ ssh -i ~/.ssh/bananaflow yc-user@10.128.0.33 "sudo systemctl start patroni"
 ssh -i ~/.ssh/bananaflow yc-user@10.128.0.20
 sudo patronictl -c /etc/patroni.yml list
 ```
-![img_6.png](img_6.png)
-![img_3.png](img_3.png)
+![img_6.png](../../images/img_17.png)
+![img_3.png](../../images/img_14.png)
 
 Список воркеров:
-![img_8.png](img_8.png)
-![img_7.png](img_7.png)
+![img_8.png](../../images/img_19.png)
+![img_7.png](../../images/img_18.png)
 
 
 # Имитация падения координатора и 2 воркеров, которые являются лидерами:
@@ -616,8 +616,8 @@ ssh -i ~/.ssh/bananaflow yc-user@10.128.0.30 "sudo systemctl start patroni"
 ssh -i ~/.ssh/bananaflow yc-user@10.130.0.32 "sudo systemctl start patroni"
 ```
 Проверка переключения:
-![img_4.png](img_4.png)
-![img_16.png](img_16.png)
+![img_4.png](../../images/img_15.png)
+![img_16.png](../../images/img_27.png)
 citus_get_active_worker_nodes()  показывает новые IP лидеров (10.129.0.31 и 10.128.0.33). Если автоматическое обновление бы не произошло, то можно было бы выполнить ручное обновление (citus_remove_node, citus_add_node)
 
 

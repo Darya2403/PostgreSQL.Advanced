@@ -1,7 +1,7 @@
 # Обеспечение высокой доступности точки входа (HAProxy + Keepalived + NLB)
 
 Доступ до координаторов:
-![img_3.png](img_3.png)
+![img_3.png](../../images/img_3.png)
 
 Устанавливаем HAProxy
 ```
@@ -86,13 +86,13 @@ sudo systemctl enable keepalived
 ```
 ip a | grep 10.128.0.200
 ```
-![img_2.png](img_2.png)
+![img_2.png](../../images/img_2.png)
 
 Статус haproxy:
-![img.png](img.png)
+![img.png](../../images/img.png)
 
 Доступность до PG:
-![img_1.png](img_1.png)
+![img_1.png](../../images/img_1.png)
 
 Выполняем похожие настройки на резервной ВМ:
 ```
@@ -164,7 +164,7 @@ vrrp_instance VI_1 {
 EOF
 ```
 В случае падения мастера:
-![img_5.png](img_5.png)
+![img_5.png](../../images/img_5.png)
 
 Хотя внутри сети мы получили отказоустойчивый VIP, для доступа из интернета нужен публичный IP, который будет направлять трафик на HAProxy. Здесь используется Network Load Balancer Yandex Cloud
 
@@ -266,4 +266,4 @@ psql -h 37.230.168.30 -U postgres -p 5432 -d postgres -c "SELECT inet_server_add
 HAProxy (на haproxy-2) получил трафик от NLB и корректно его направил на новый активный координатор
 
 Интерфейс в Яндексе после создания NLB:
-![img_4.png](img_4.png)
+![img_4.png](../../images/img_4.png)

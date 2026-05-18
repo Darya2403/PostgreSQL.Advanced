@@ -10,7 +10,7 @@ psql -U postgres
 ```
 SELECT * FROM citus_get_active_worker_nodes();
 ```
-![img_9.png](img_9.png)
+![img_9.png](../../images/img_20.png)
 
 Создание распределённой таблицы и информация о шардах
 ```
@@ -21,7 +21,7 @@ SELECT shardid, shardstorage, shardminvalue, shardmaxvalue
 FROM pg_dist_shard 
 WHERE logicalrelid = 'test'::regclass;
 ```
-![img_10.png](img_10.png)
+![img_10.png](../../images/img_21.png)
 
 Распределение шардов по физическим узлам
 ```
@@ -31,13 +31,13 @@ JOIN pg_dist_node n ON p.groupid = n.groupid
 WHERE p.shardid IN (SELECT shardid FROM pg_dist_shard WHERE logicalrelid = 'test'::regclass)
 ORDER BY p.shardid;
 ```
-![img_11.png](img_11.png)
+![img_11.png](../../images/img_22.png)
 
 План выполнения простого запроса
 ```
 EXPLAIN (COSTS OFF) SELECT count(*) FROM test;
 ```
-![img_12.png](img_12.png)
+![img_12.png](../../images/img_23.png)
 
 Масштабирование до 10 000 строк
 ```
@@ -52,7 +52,7 @@ JOIN pg_dist_node n ON p.groupid = n.groupid
 WHERE p.shardid IN (SELECT shardid FROM pg_dist_shard WHERE logicalrelid = 'test'::regclass)
 GROUP BY n.nodename;
 ```
-![img_13.png](img_13.png)
+![img_13.png](../../images/img_24.png)
 
 Детальный план запроса с показом всех задач; citus.explain_all_tasks = on заставляет Citus показывать план для каждого шарда
 ```
@@ -60,5 +60,5 @@ SET citus.explain_all_tasks TO on;
 EXPLAIN (ANALYZE, VERBOSE, COSTS OFF) SELECT count(*) FROM test;
 SET citus.explain_all_tasks TO off;
 ```
-![img_15.png](img_15.png)
-![img_14.png](img_14.png)
+![img_15.png](../../images/img_26.png)
+![img_14.png](../../images/img_25.png)
